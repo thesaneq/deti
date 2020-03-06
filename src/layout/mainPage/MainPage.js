@@ -65,7 +65,7 @@ function MainPage() {
                           key={gender.id}
                           value={gender.id}
                           onChange={event => setGender(event.target.value)}
-                          text={gender.id === 1 ? 'мальчик' : 'девочка'}
+                          text={gender.title}
                       />
                   )
                 }
