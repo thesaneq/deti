@@ -1,0 +1,151 @@
+$blue: #154ec9;
+$yellow: #f7921e;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  * {
+    font-family: "Roboto", serif;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    flex: 1 1 auto;
+    z-index: 1;
+  }
+
+  .info {
+    margin: 69px 0;
+
+    &-title {
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    hr {
+      border: none;
+      display: block;
+      width: 76px;
+      height: 3px;
+      background-color: $yellow;
+      margin: 17px 0;
+    }
+
+    &-inner {
+      display: flex;
+      margin-top: 76px;
+
+      &-counter {
+        margin-left: 62px;
+
+        span {
+          &:first-child {
+            display: block;
+            color: $yellow;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 70px;
+            margin-bottom: 20px;
+            min-height: 70px;
+          }
+
+          &:last-child {
+            color: #1641a8;
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .search {
+    height: 279px;
+    background-color: #f1f5fe;
+    padding: 48px 75px;
+    margin-bottom: 50px;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      > span {
+        margin-bottom: 30px;
+      }
+
+      &-button {
+        width: 146px;
+        height: 48px;
+        color: white;
+        border-radius: 4px;
+        background-color: $blue;
+        align-self: center;
+        border: none;
+        margin-top: auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .list {
+    hr {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #d7dbe0;
+      margin-bottom: 27px;
+    }
+
+    &-counter {
+      margin-bottom: 52px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin: 39px 0 31px;
+
+      li {
+        background: #f7f7f7;
+        min-width: 39px;
+        height: 39px;
+        cursor: pointer;
+
+        &.active {
+          background: #3b4255;
+          color: white;
+        }
+
+        &:nth-last-child(2) {
+          background: #eeeeee;
+          color: $blue;
+        }
+
+        a {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .previous, .next {
+        display: none;
+      }
+    }
+  }
+}
